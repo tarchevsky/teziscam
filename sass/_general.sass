@@ -1,0 +1,357 @@
+*, *:before, *:after
+   font-family: 'Roboto'
+
+body
+   font-family: 'Roboto', sans-serif
+   font-size: 60px
+   color: #000
+
+a
+   text-decoration: none
+   color: #000
+
+p, div
+   font-size: 20px
+   font-weight: 200
+   margin: 0
+
+h1, h2, h3, h4, h5, h6
+   margin: 0
+
+h2
+   font-size: 42px
+   letter-spacing: 1,5px
+   font-weight: 500
+h3
+   font-size: 60px
+   font-weight: 500
+h4
+   font-size: 40px
+   font-weight: 500
+   line-height: 1
+   margin: 0
+
+h6
+   font-size: 20px
+   width: 600
+
+.container
+   width: 100%
+   max-width: 1300px
+   margin: 0 auto
+
+.main
+   &-header
+      display: flex
+      justify-content: space-between
+      border-bottom: 2px solid #000
+   &-logo
+      display: flex
+      align-items: center
+      font-size: 50px
+   &-menu
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr 1fr
+      &__point
+         align-self: center
+         justify-self: center
+         font-size: 17px
+         text-transform: uppercase
+         font-weight: 600
+         &--mob
+            display: none
+      &__button
+         padding: 50px 40px
+         font-size: 17px
+         text-transform: uppercase
+         font-weight: 900
+         background-color: #fff
+         border-top: none
+         border-right: 2px solid #000
+         border-left: 2px solid #000
+         border-bottom: none
+         transition: all .2s ease-in-out
+         &:hover
+            background-color: #ff0082
+            color: #fff
+            border-right: 2px solid #ff0082
+            border-left: 2px solid #ff0082
+   &-screen
+      display: flex
+      height: 600px
+      &__usp
+         display: grid
+         grid-template: 1fr / 1fr 1fr
+         align-items: center
+         &--btn
+            position: absolute
+            top: -10px
+            left: -10px
+            height: 64px
+            width: 364px
+            font-size: 17px
+            text-transform: uppercase
+            border: 2px solid #0937fd
+            background-color: #0937fd
+            color: #fff
+            transition: all .2s ease-in-out
+            &:hover
+               top: -2px
+               left: -2px
+               right: -1px
+               background-color: #ff0082
+               border: 2px solid #ff0082
+
+            &-wrapper
+               position: relative
+               height: 60px
+               width: 360px
+               border: 2px solid #333
+               justify-self: end
+               // &:hover
+               //    border: 2px solid #ff0082
+
+// Плитка изображейний (специализации)
+
+.grid
+   display: grid
+   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr))
+   gap: 40px
+   &__item
+      height: 400px
+      cursor: pointer
+      &:nth-child(1)
+         background: url('../img/cards/neuro-brain.jpg') center (center / cover) no-repeat
+      &:nth-child(2)
+         background: url('../img/cards/video.jpg') center (center / cover) no-repeat
+      &:nth-child(3)
+         background: url('../img/cards/creative.jpg') center (center / cover) no-repeat
+      &:nth-child(4)
+         background: url('../img/cards/seo.jpg') center (center / cover) no-repeat
+      &:nth-child(5)
+         background: url('../img/cards/typewriter.jpg') center (center / cover) no-repeat
+      &:nth-child(6)
+         background: url('../img/cards/ux.jpg') center (center / cover) no-repeat
+      &:nth-child(even)
+         margin-bottom: 30px
+      &:last-child
+         margin-bottom: 0
+      &--wrapper
+         display: flex
+         justify-content: center
+         align-items: center
+         flex-direction: column
+         z-index: 10
+         height: 100%
+         width: 100%
+         opacity: 0
+         transition: opacity .3s linear
+      &:hover &--wrapper
+         background: #0000004d
+         opacity: 1
+         color: #fff
+      &__sub
+         font-size: 17px
+         width: 400px
+         text-align: center
+
+// Стандартный блок
+
+.block
+   margin-top: 150px
+   &-header
+      margin-bottom: 50px
+   &-descr
+      padding-top: 50px
+      width: 100%
+      max-width: 400px
+
+// Таймлайн
+
+.timeline
+   margin-top: 50px
+   &-web
+      padding-top: 50px
+      position: relative
+      &__steps
+         display: grid
+         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr))
+      &__item
+         width: 100%
+         max-width: 200px
+         border-bottom: 2px solid #000
+         margin-bottom: 30px
+         padding-top: 40px
+         &:nth-child(-n+5)
+            background-color: #00000035
+         &--sup
+            position: absolute
+            top: 0px
+            font-weight: 500
+            width: 200px
+         &--mvp
+            position: absolute
+            top: 64px
+            font-size: 12px
+            left: 30%
+            transform: translateX(-30%)
+            font-weight: 500
+            color: #fff
+         &--heading
+            padding-left: 10px
+         &--descr
+            font-size: 16px
+            width: 100%
+            max-width: 100px
+            padding-bottom: 20px
+            padding-left: 10px
+      &__line
+         position: absolute
+         z-index: 100
+         bottom: 30px
+         transform: rotate(90deg) translateY(15px)
+         display: block
+         content: ''
+         height: 2px
+         width: 30px
+         background-color: #000
+         &--end
+            position: absolute
+            z-index: 100
+            bottom: 30px
+            right: 0
+            transform: rotate(90deg) translateY(-15px)
+            display: block
+            content: ''
+            height: 2px
+            width: 30px
+            background-color: #000
+   &-video
+      padding-top: 50px
+      position: relative
+      &__steps
+         display: grid
+         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr))
+      &__item
+         width: 100%
+         max-width: 200px
+         border-bottom: 2px solid #000
+         margin-bottom: 30px
+         padding-top: 40px
+         &:nth-child(-n+5)
+            background-color: #00000035
+         &--sup
+            position: absolute
+            top: 0px
+            font-weight: 500
+            width: 200px
+         &--mvp
+            position: absolute
+            top: 64px
+            font-size: 12px
+            left: 30%
+            transform: translateX(-30%)
+            font-weight: 500
+            color: #fff
+         &--heading
+            padding-left: 10px
+         &--descr
+            font-size: 16px
+            width: 100%
+            max-width: 100px
+            padding-bottom: 20px
+            padding-left: 10px
+      &__line
+         position: absolute
+         z-index: 100
+         bottom: 30px
+         transform: rotate(90deg) translateY(15px)
+         display: block
+         content: ''
+         height: 2px
+         width: 30px
+         background-color: #000
+         &--end
+            position: absolute
+            z-index: 100
+            bottom: 30px
+            right: 0
+            transform: rotate(90deg) translateY(-15px)
+            display: block
+            content: ''
+            height: 2px
+            width: 30px
+            background-color: #000
+.postline
+   padding-top: 15px
+   border-top: 2px solid #00000035
+   font-size: 12px
+   color: #00000063
+   font-weight: 500
+   text-align: center
+
+// Преимущества
+
+.benefits
+   width: 100%
+   margin: 0 auto
+   margin-top: 50px
+   z-index: 1000
+   &-item
+      display: grid
+      grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr))
+      gap: 20px
+      height: 250px
+      border-bottom: 2px solid #00000035
+      padding-top: 30px
+      &__heading
+         font-size: 30px
+      &__descr
+         line-height: 1.5
+         letter-spacing: 1.5px
+      &__plus
+         position: relative
+         height: 40px
+         width: 40px
+         justify-self: end
+         transition: transform .3s ease-in-out
+         &>span
+            position: absolute
+            top: 20px
+            right: 0
+            width: 40px
+            height: 2px
+            display: block
+            content: ''
+            background-color: #333
+            &:nth-child(2)
+               transform: rotate(90deg)
+      &:hover .benefits-item__plus
+         transform: rotate(180deg)
+         &>span
+            background-color: #ff0082
+
+// Раскрывашки
+
+.sites
+   &__tabs
+      display: flex
+      justify-content: center
+      gap: 30px
+   &__tab
+      padding-bottom: 30px
+      cursor: pointer
+      transition: all .3s ease-in-out
+      border-bottom: 2px solid #fff
+      &--active
+         border-bottom: 2px solid #ff0082
+         color: #ff0082
+   &__content
+      padding-top: 30px
+   &__descr
+      transition: all .3s ease-in-out
+      &>strong
+         display: block
+         font-size: 30px
+         font-weight: 500
+         padding-bottom: 30px

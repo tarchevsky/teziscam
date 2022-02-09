@@ -1,0 +1,25 @@
+@media (max-width: 1024px)
+   .container
+      max-width: calc(100% - 10vw)
+   .main
+      &-menu
+         grid-template-columns: 1fr
+         padding: 40px 0
+         &__point
+            justify-self: end
+            &--mob
+               display: block
+         &__button
+            display: none
+
+@media (max-width: 425px)
+   .main
+      &-logo
+         font-size: 30px
+@media (max-width: 280px)
+   .main
+      &-logo
+         font-size: 28px
+      &-menu
+         &__point
+            font-size: 14px
