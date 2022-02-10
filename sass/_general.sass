@@ -385,3 +385,21 @@ h6
       gap: 30px
       margin-top: 50px
       letter-spacing: 2
+
+// Технологии
+
+.technologies
+   display: grid
+   grid-template-columns: repeat(auto-fill, minmax(10vw, 1fr))
+   &__item
+      justify-self: center
+      margin-top: 50px
+      margin-bottom: 100px
+      img
+         display: block
+         height: 60px
+         width: auto
+         filter: grayscale(100%)
+         transition: filter .3s ease-in-out
+         &:hover
+            filter: grayscale(0%)
