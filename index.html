@@ -31,6 +31,9 @@
 				<a href="##" class="main-menu__point">Команда</a>
 				<a href="##" class="main-menu__point main-menu__point--mob">Контакты</a>
 			</nav>
+			<nav class="main-menu">
+				<a href="" class="main-menu__point">EN</a>
+			</nav>
 			<button class='main-menu__button'>Контакты</button>
 		</header>
 		<main class="main-screen">
@@ -45,39 +48,41 @@
 			</div>
 		</main>
 		<section class="grid">
-			<div class="grid__item">
+			<div class="grid__item" data-aos="fade-up">
 				<h3 class="grid__item--wrapper">Веб-разработка<p class="grid__item__sub">Качественное проектирование
 						конверсионных лендингов, инфо-сайтов и профессиональных визиток.</p>
 				</h3>
 			</div>
-			<div class="grid__item">
+			<div class="grid__item" data-aos="fade-up">
 				<h3 class="grid__item--wrapper">Видео<p class="grid__item__sub">Пренетационные и имиджевые ролики, интервью.
 						Контент, который хочется пересматривать. Instagram и Youtube - формат</p>
 				</h3>
 			</div>
-			<div class="grid__item">
+			<div class="grid__item" data-aos="fade-up">
 				<h3 class="grid__item--wrapper">Дизайн<p class="grid__item__sub">Креатив и эстетика, цепляющие потребителя.
 						Смысл, вложенный в увиденное</p>
 				</h3>
 			</div>
-			<div class="grid__item">
+			<div class="grid__item" data-aos="fade-up">
 				<h3 class="grid__item--wrapper">Продвижение<p class="grid__item__sub">Широкий диапазон коммуникативных
 						стратегий в цифровых медиа для увеличения спроса, узнаваемости, поддержания имиджа продукции</p>
 				</h3>
 			</div>
-			<div class="grid__item">
+			<div class="grid__item" data-aos="fade-up">
 				<h3 class="grid__item--wrapper">Тексты<p class="grid__item__sub">Действенные тексты, написанные живым
 						языком. Ближе к пользователю, убидительно, понятно и естественно</p>
 				</h3>
 			</div>
-			<div class="grid__item">
+			<div class="grid__item" data-aos="fade-up">
 				<h3 class="grid__item--wrapper">UX / UI<p class="grid__item__sub">Многомерное изучение человеческого отклика
 						на разработку. Исследование опыта взаимодействия пользователя с продутом и интерфейсами для повышения
 						эффективности</p>
 				</h3>
 			</div>
 		</section>
-		<section class="block">
+		<section class="block" data-aos="fade-right"
+		data-aos-offset="300"
+		data-aos-easing="ease-in-sine">
 			<div class="block-header">
 				<h3 class="block-heading">Веб-разработка</h3>
 				<h4 class="block-sub">Процесс</h4>
@@ -139,13 +144,14 @@
 			</div>
 			<div class="postline">Фоновые процессы, тексты, изображения, видео</div>
 		</section>
-		<section class="block">
+		<section class="block" data-aos="fade-left"
+		data-aos-anchor="#example-anchor"
+		data-aos-offset="3000"
+		data-aos-duration="500">
 			<div class="block-header">
 				<h3 class="block-heading">Какие мы делаем сайты <br>и для чего они нужны</h3>
 			</div>
-		</section>
-
-		<!-- Раскрывашки -->
+			<!-- Раскрывашки -->
 
 		<section class="sites">
 			<div class="sites__wrapper">
@@ -234,6 +240,9 @@
 				</div>
 			</div>
 		</section>
+		</section>
+
+		
 		<section class="block">
 			<div class="block-header">
 				<h3 class="block-heading">Наши критерии<br>создания сайтов</h3>
@@ -431,6 +440,9 @@
 		</section>
 	</div>
 	<script src="js/aos.js"></script>
+	<script>
+		AOS.init();
+	 </script>
 	<script src="js/script.js"></script>
 </body>
 
