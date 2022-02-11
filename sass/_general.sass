@@ -35,6 +35,10 @@ h6
    font-size: 20px
    width: 600
 
+blockquote
+   border-left: 2px solid #0000009a
+   padding-left: 30px
+
 .container
    width: 100%
    max-width: 1300px
@@ -158,6 +162,17 @@ h6
          font-size: 17px
          width: 400px
          text-align: center
+
+// Миссия
+
+.mission
+   margin-top: 100px
+   margin-bottom: 100px
+   &__heading
+      font-size: 150px
+   &__descr
+      margin-top: 50px
+      font-size: 30px
 
 // Стандартный блок
 
@@ -407,3 +422,23 @@ h6
          transition: filter .3s ease-in-out
          &:hover
             filter: grayscale(0%)
+
+// Страница UX
+
+.ux
+   &__text
+      display: flex
+      justify-content: space-between
+      &>.block-descr
+         width: 100%
+         max-width: 600px
+   &__wrapper
+      position: relative
+   &__number
+      position: absolute
+      display: block
+      transform: translateY(-20px)
+      left: -10px
+      font-size: 120px
+      font-weight: 900
+      color: #0000000f
