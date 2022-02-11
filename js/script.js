@@ -38,9 +38,5 @@ window.addEventListener('DOMContentLoaded', () => {
 	};
 	video.onmouseout = function () {
 		video.pause();
-		video.currentTime = 0;
 	};
-	// if (video.onmouseover()) {
-	// 	video.play();
-	// }
 });
