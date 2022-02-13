@@ -19,9 +19,14 @@
    .container
       max-width: calc(100% - 10vw)
    .main
+      &-logo
+         order: 1
       &-menu
          grid-template-columns: 1fr
          padding: 40px 0
+         order: 2
+         &:nth-child(2)
+            order: 3
          &__point
             justify-self: end
             &--mob
@@ -50,6 +55,9 @@
       margin-top: 50px
       &__item
          background-size: 100px
+   .mission
+      &__heading
+         font-size: 20vw
    .sites
       &__tabs
          flex-wrap: wrap

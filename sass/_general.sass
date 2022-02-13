@@ -5,6 +5,8 @@ body
    font-family: 'Roboto', sans-serif
    font-size: 60px
    color: #000
+   overflow-x: hidden
+   border: 1px dotted blue
 
 a
    text-decoration: none
@@ -63,6 +65,9 @@ blockquote
          font-size: 17px
          text-transform: uppercase
          font-weight: 600
+         transition: color .2s ease-in-out
+         &:hover
+            color: #ff0082
          &--mob
             display: none
       &__button
@@ -92,6 +97,7 @@ blockquote
             position: absolute
             top: -10px
             left: -10px
+            z-index: 10000
             height: 64px
             width: 364px
             font-size: 17px
@@ -153,6 +159,7 @@ blockquote
          height: 100%
          width: 100%
          opacity: 0
+         text-align: center
          transition: opacity .3s linear
       &:hover &--wrapper
          background: #000000b2
@@ -160,7 +167,8 @@ blockquote
          color: #fff
       &__sub
          font-size: 17px
-         width: 400px
+         width: 100%
+         max-width: 400px
          text-align: center
 
 // Миссия
