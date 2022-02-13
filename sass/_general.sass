@@ -49,6 +49,20 @@ blockquote
    max-width: 1300px
    margin: 0 auto
 
+.breadcrumbs
+   margin-top: 50px
+   &__nav
+      display: flex
+      justify-content: flex-start
+      font-weight: normal
+      font-size: 16px
+      color: #0000002a
+      &--active
+         color: #000
+      &--divider
+         white-space: pre-wrap
+
+
 .main
    &-header
       display: flex
@@ -193,15 +207,22 @@ blockquote
       justify-content: space-between
       flex-wrap: wrap
       background: url('../img/tezis/words.jpg') center center/cover no-repeat
-      height: 100%
+      background-size: 103%
+      height: min-content
+      margin-bottom: 50px
+      transition: background .3s ease-in-out
+      &:hover
+         background-size: calc(103% - 3%)
    &__item
-      margin-bottom: 30px
+      display: grid
+      grid-template-columns: 1fr 1fr
       background-color: #fff
       height: min-content
-      width: 500px
+      width: 400px
       padding: 30px
-      &:last-child
-         align-self: flex-end
+      &>p
+         font-weight: normal
+         font-size: 16px
       &--none
          width: 500px
 
