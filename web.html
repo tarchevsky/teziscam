@@ -118,7 +118,7 @@
 			<div class="sites__wrapper">
 				<div class="sites__tabs">
 					<div class="sites__tab sites__tab--active">Лендинг</div>
-					<div class="sites__tab">Визитка</div>
+					<div class="sites__tab">Корпоративный сайт</div>
 					<div class="sites__tab">Инфо-сайт</div>
 					<div class="sites__tab">Имиджевый сайт</div>
 					<div class="sites__tab">SPA</div>
@@ -139,7 +139,7 @@
 							более
 							сложные: пройти несложный тест или запросить бесплатный материал.</p>
 					</div>
-					<div class="sites__descr"><strong>Визитка</strong>
+					<div class="sites__descr"><strong>Корпоративный сайт</strong>
 						<p>в первую очередь создается с целью поддержания репутации и узнаваемости
 							бренда и представляет собой веб-презентацию, которая на нескольких страницах деликатно рассказывает
 							о
@@ -263,8 +263,9 @@
 					<p class="benefits-item__descr">Исследуем рынок и обоснованно реагируем на изменения в нуждах
 						потребителей</p>
 					<div class="benefits-item__plus"><span></span><span></span></div>
-					</p>
 				</div>
+				<div class="cursor"></div>
+			</div>
 		</section>
 
 		<!-- Наши технологии -->
@@ -291,11 +292,19 @@
 		</section>
 
 	</div>
+	<script>
+		const cursor = document.querySelector('.cursor');
+		document.addEventListener ('mousemove', (e) => {
+			cursor.style.left = e.pageX + 'px';
+			cursor.style.top = e.pageY + 'px';
+		})
+	</script>
 	<script src="js/aos.js"></script>
 	<script>
 		AOS.init();
 	 </script>
 	<script src="js/tabs.js"></script>
+	<!-- <script src="js/script.js"></script> -->
 </body>
 
 </html>
