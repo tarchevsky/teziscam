@@ -1,0 +1,37 @@
+<svg width="742" height="742" viewBox="0 0 742 742" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="50" height="4" transform="matrix(1 0 0 -1 151 235)" fill="white"/>
+<rect x="1" y="-1" width="48" height="2" transform="matrix(1 0 0 -1 541 233)" fill="white" stroke="white" stroke-width="2"/>
+<rect width="50" height="4" transform="matrix(1 0 0 -1 541 512)" fill="white"/>
+<rect width="50" height="4" transform="matrix(1 0 0 -1 151 512)" fill="white"/>
+<rect x="151" y="233" width="4" height="51" fill="white"/>
+<rect x="588" y="232" width="2" height="49" fill="white" stroke="white" stroke-width="2"/>
+<rect x="587" y="460" width="4" height="51" fill="white"/>
+<rect x="151" y="459" width="4" height="51" fill="white"/>
+<path d="M432.512 371.119C432.512 405.101 405.109 432.631 371.327 432.631C337.546 432.631 310.143 405.101 310.143 371.119C310.143 337.137 337.546 309.607 371.327 309.607C405.109 309.607 432.512 337.137 432.512 371.119Z" stroke="white" stroke-width="4"/>
+<rect x="370" y="266" width="4" height="36.0119" fill="white"/>
+<rect x="370" y="440" width="4" height="36" fill="white"/>
+<rect x="266" y="369" width="36" height="4" fill="white"/>
+<rect x="440" y="369" width="36" height="4" fill="white"/>
+<rect x="370" y="366" width="3" height="11" fill="white"/>
+<rect x="377.131" y="370" width="3" height="11.131" transform="rotate(89.9131 377.131 370)" fill="white"/>
+<circle cx="371.619" cy="316.619" r="2.61905" fill="white"/>
+<circle cx="371.619" cy="327.095" r="2.61905" fill="white"/>
+<circle cx="371.619" cy="337.571" r="2.61905" fill="white"/>
+<circle cx="371.619" cy="348.048" r="2.61905" fill="white"/>
+<circle cx="371.619" cy="358.524" r="2.61905" fill="white"/>
+<circle cx="425.524" cy="371.619" r="2.61905" fill="white"/>
+<circle cx="415.048" cy="371.619" r="2.61905" fill="white"/>
+<circle cx="404.571" cy="371.619" r="2.61905" fill="white"/>
+<circle cx="394.095" cy="371.619" r="2.61905" fill="white"/>
+<circle cx="383.619" cy="371.619" r="2.61905" fill="white"/>
+<circle cx="318.619" cy="371.619" r="2.61905" fill="white"/>
+<circle cx="328.857" cy="371.619" r="2.61905" fill="white"/>
+<circle cx="339.095" cy="371.619" r="2.61905" fill="white"/>
+<circle cx="349.333" cy="371.619" r="2.61905" fill="white"/>
+<circle cx="359.571" cy="371.619" r="2.61905" fill="white"/>
+<circle cx="371.619" cy="425.571" r="2.61905" fill="white"/>
+<circle cx="371.619" cy="415.333" r="2.61905" fill="white"/>
+<circle cx="371.619" cy="405.095" r="2.61905" fill="white"/>
+<circle cx="371.619" cy="394.857" r="2.61905" fill="white"/>
+<circle cx="371.619" cy="384.619" r="2.61905" fill="white"/>
+</svg>

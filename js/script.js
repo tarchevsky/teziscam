@@ -1,5 +1,13 @@
-const cursor = document.querySelector('.cursor');
+let cursor = document.querySelector('.cursor');
+// let elem = document.getElementsByTagName("div");
+// let cursorActive = document.querySelector('.cursor__active');
+// let contains = elem.classList.contains(cursorActive);
+
+function addCursor() {
+
+}
+
 document.addEventListener ('mousemove', (e) => {
-   	cursor.style.left = e.pageX + 'px';
-	cursor.style.top = e.pageY + 'px';
+   	cursor.style.left = e.clientX + 'px';
+		cursor.style.top = e.clientY + 'px';
 });

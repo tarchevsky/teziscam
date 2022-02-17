@@ -1,17 +1,20 @@
 *, *:before, *:after
-   font-family: 'Roboto'
+   font-family: 'Roboto', sans-serif
    margin: 0
    padding: 0
+   box-sizing: border-box
 
 body
    font-family: 'Roboto', sans-serif
    font-size: 60px
    color: #000
    overflow-x: hidden
+   cursor: none
 
 a
    text-decoration: none
    color: #000
+   mix-blend-mode: difference
 
 p, div
    font-size: 20px
@@ -46,23 +49,51 @@ blockquote
    border-left: 2px solid #0000009a
    padding-left: 30px
 
+[data-tooltip] 
+    position: relative 
+[data-tooltip]::after 
+   content: attr(data-tooltip)
+   position: absolute 
+   width: 300px 
+   left: -15px
+   background: #fff 
+   color: #000
+   font-size: 16px
+   box-shwdow: 0 0 12px 12px #421414
+   padding: 20px
+   pointer-events: none
+   opacity: 0
+   transition: .2s
+[data-tooltip]:hover::after 
+   opacity: 1
+   top: 100px
+
+
 .cursor
    position: fixed
-   z-index: 1000
    width: 150px
    height: 150px
    border-radius: 100%
-   background-color: #333
-   // transform: translate(-160%, -300%)
    transform: translate(-50%, -50%)
-   background: url('../img/cam.png') center center / cover no-repeat
-   background-size: 120px
-   transition: .1s
+   // background: url('../img/cam.svg') center center / cover no-repeat
+   background-size: 180px
+   background-color: #333
+   pointer-events: none
+   transition: .2s
+   mix-blend-mode: difference
+   z-index: 1000
+   & img
+      position: absolute
+      width: 200px
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
 
 .container
    width: 100%
    max-width: 1300px
    margin: 0 auto
+   position: relative
 
 .breadcrumbs
    margin-top: 50px
@@ -122,8 +153,15 @@ blockquote
    &-screen
       display: flex
       height: 600px
-      
       // background: url('../img/cam.png') center center/cover no-repeat
+      &:hover ~ .cursor
+         background-color: #ffffff8a
+         // background-image: none
+         transform: scale(2)
+         border: 3px solid #000
+         & img > svg
+            fill: black
+            stroke: black
       &__usp
          display: grid
          grid-template: 1fr / 1.3fr 0.7fr
@@ -132,6 +170,7 @@ blockquote
             font-size: 28px
          &--heading
             font-size: 40px
+            color: #0f0e0e
          &--btn
             position: absolute
             top: -10px
@@ -184,7 +223,7 @@ blockquote
       &:nth-child(5)
          background: url('../img/cards/typewriter3.jpg') center (center / cover) no-repeat
       &:nth-child(6)
-         background: url('../img/cards/ux.jpg') center (center / cover) no-repeat
+         background: url('../img/cards/ux1.jpg') center (center / cover) no-repeat
       &:nth-child(even)
          margin-bottom: 30px
       &:last-child
@@ -194,7 +233,7 @@ blockquote
          justify-content: center
          align-items: center
          flex-direction: column
-         z-index: 10
+         // z-index: 10
          height: 100%
          width: 100%
          opacity: 0
@@ -263,6 +302,7 @@ blockquote
 
 .timeline
    margin-top: 50px
+   position: relative
    &-web
       padding-top: 50px
       position: relative
@@ -403,7 +443,6 @@ blockquote
 // Преимущества
 
 .benefits
-   position: relative
    width: 100%
    margin: 0 auto
    margin-top: 50px
@@ -485,6 +524,9 @@ blockquote
 .technologies
    display: grid
    grid-template-columns: repeat(auto-fill, minmax(10vw, 1fr))
+   &:hover ~ .cursor
+      transform: scale(10)
+      background-color: #fff
    &__item
       justify-self: center
       margin-top: 50px
