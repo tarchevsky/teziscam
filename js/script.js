@@ -1,13 +1,16 @@
-let cursor = document.querySelector('.cursor');
-// let elem = document.getElementsByTagName("div");
-// let cursorActive = document.querySelector('.cursor__active');
-// let contains = elem.classList.contains(cursorActive);
+const cursor = document.querySelector('.cursor'),
+		cursorOff = document.querySelector('.cursor__off');
 
-function addCursor() {
+const cursorRem = cursorOff.addEventListener ('mouseover', (e) => {
+	cursor.style.display = 'none';
+});
 
-}
+const cursorAdd = cursorOff.addEventListener ('mouseout', (e) => {
+	cursor.style.display = 'block';
+});
 
 document.addEventListener ('mousemove', (e) => {
-   	cursor.style.left = e.clientX + 'px';
-		cursor.style.top = e.clientY + 'px';
+	cursor.style.left = e.clientX + 'px';
+	cursor.style.top = e.clientY + 'px';
 });
+

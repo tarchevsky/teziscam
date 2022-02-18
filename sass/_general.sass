@@ -46,26 +46,6 @@ blockquote
    border-left: 2px solid #0000009a
    padding-left: 30px
 
-[data-tooltip] 
-    position: relative 
-[data-tooltip]::after 
-   content: attr(data-tooltip)
-   position: absolute 
-   width: 300px 
-   left: -15px
-   background: #fff 
-   color: #000
-   font-size: 16px
-   box-shwdow: 0 0 12px 12px #421414
-   padding: 20px
-   pointer-events: none
-   opacity: 0
-   transition: .2s
-[data-tooltip]:hover::after 
-   opacity: 1
-   top: 100px
-
-
 .cursor
    position: fixed
    width: 150px
@@ -76,7 +56,7 @@ blockquote
    background-size: 180px
    background-color: #333
    pointer-events: none
-   transition: .2s
+   transition: .1s, opacity .2s linear
    mix-blend-mode: difference
    z-index: 1000
    & img
@@ -259,8 +239,6 @@ blockquote
 
 .tezis
    &__list
-      display: flex
-      justify-content: space-between
       flex-wrap: wrap
       background: url('../img/tezis/words.jpg') center center/cover no-repeat
       background-size: 103%
@@ -519,9 +497,6 @@ blockquote
 .technologies
    display: grid
    grid-template-columns: repeat(auto-fill, minmax(10vw, 1fr))
-   &:hover ~ .cursor
-      transform: scale(10)
-      background-color: #fff
    &__item
       justify-self: center
       margin-top: 50px
@@ -534,6 +509,26 @@ blockquote
          transition: filter .3s ease-in-out
          &:hover
             filter: grayscale(0%)
+
+[data-tooltip] 
+    position: relative 
+
+[data-tooltip]::after 
+   content: attr(data-tooltip)
+   position: absolute 
+   width: 150px 
+   left: -15px
+   background-color: #fff 
+   color: #000
+   font-size: 16px
+   box-shwdow: 0 0 12px 12px #421414
+   padding: 20px
+   pointer-events: none
+   opacity: 0
+   transition: .2s
+[data-tooltip]:hover::after 
+   opacity: 1
+   top: 100px
 
 // Страница UX
 
