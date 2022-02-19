@@ -4,15 +4,15 @@
    padding: 0
    box-sizing: border-box
 
-body
+body 
    font-family: 'Roboto', sans-serif
    font-size: 60px
    color: #000
    cursor: none
-
 a
    text-decoration: none
    color: #000
+   cursor: none
 
 p, div
    font-size: 20px
@@ -26,6 +26,8 @@ h2
    font-size: 42px
    letter-spacing: 1,5px
    font-weight: 500
+   color: #000000
+   mix-blend-mode: difference
 h3
    font-size: 60px
    font-weight: 500
@@ -53,19 +55,21 @@ blockquote
    height: 150px
    border-radius: 100%
    transform: translate(-50%, -50%)
-   // background: url('../img/cam.svg') center center / cover no-repeat
    background-size: 180px
-   background-color: #333
+   background-color: #000
    pointer-events: none
-   transition: .1s, opacity .2s linear
+   transition: .1s
    mix-blend-mode: difference
-   z-index: 1000
+   z-index: 99999
    & img
       position: absolute
       width: 200px
       left: 50%
       top: 50%
       transform: translate(-50%, -50%)
+      &>svg>*
+         fill: black !important
+         stroke: black !important
 
 .container
    width: 100%
@@ -91,6 +95,7 @@ blockquote
       display: flex
       justify-content: space-between
       border-bottom: 2px solid #000
+      transition: all .2s ease-in-out
    &-logo
       display: flex
       align-items: center
@@ -99,6 +104,14 @@ blockquote
    &-menu
       display: grid
       grid-template-columns: 1fr 1fr 1fr 1fr
+      transition: all .2s ease-in-out
+      &:hover ~ .cursor
+         height: 20px
+         width: 20px
+         background-color: #000
+         mix-blend-mode: difference
+         & img
+            display: none
       &__point
          align-self: center
          justify-self: center
@@ -130,14 +143,14 @@ blockquote
       display: flex
       height: 600px
       // background: url('../img/cam.png') center center/cover no-repeat
+      transition: all .2s ease-in-out
       &:hover ~ .cursor
-         background-color: #ffffff8a
-         // background-image: none
-         transform: scale(2)
-         border: 3px solid #000
-         & img > svg
-            fill: black
-            stroke: black
+         height: 20px
+         width: 20px
+         background-color: #000
+         mix-blend-mode: difference
+         & img
+            display: none
       &__usp
          display: grid
          grid-template: 1fr / 1.3fr 0.7fr
@@ -146,7 +159,13 @@ blockquote
             font-size: 28px
          &--heading
             font-size: 40px
-            color: #0f0e0e
+            color: #000
+            transition: all .2s ease-in-out
+            // &>span
+            //    transition: all .2s ease-in-out
+            //    &:hover
+            //       color: #fff
+
          &--btn
             position: absolute
             top: -10px
@@ -171,7 +190,7 @@ blockquote
                position: relative
                height: 60px
                width: 360px
-               border: 2px solid #333
+               border: 2px solid #000
                justify-self: end
                // &:hover
                //    border: 2px solid #ff0082
@@ -182,12 +201,14 @@ blockquote
    display: grid
    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr))
    gap: 40px
+   transition: all .2s ease-in-out
+   &:hover ~ .cursor
+      background-color: #333
    &__link
       display: block
       color: #fff
    &__item
       height: 400px
-      cursor: pointer
       &:nth-child(1)
          background: url('../img/cards/neuro-brain.jpg') center (center / cover) no-repeat
       &:nth-child(2)
@@ -239,6 +260,9 @@ blockquote
 // Тезисы
 
 .tezis
+   background-color: #fff
+   &:hover ~ .cursor
+      background-color: #333
    &__list
       flex-wrap: wrap
       background: url('../img/tezis/words.jpg') center center/cover no-repeat
@@ -375,7 +399,7 @@ blockquote
          content: ''
          height: 10px
          width: 10px
-         border: 2px solid #333
+         border: 2px solid #000
          border-radius: 100%
          background-color: #fff
          &--end
@@ -388,7 +412,7 @@ blockquote
             content: ''
             height: 10px
             width: 10px
-            border: 2px solid #333
+            border: 2px solid #000
             border-radius: 100%
             background-color: #fff
       &__icon
@@ -447,7 +471,7 @@ blockquote
             height: 2px
             display: block
             content: ''
-            background-color: #333
+            background-color: #000
             &:nth-child(2)
                transform: rotate(90deg)
       &:hover .benefits-item__plus
@@ -498,6 +522,7 @@ blockquote
 .technologies
    display: grid
    grid-template-columns: repeat(auto-fill, minmax(10vw, 1fr))
+   cursor: auto
    &__item
       justify-self: center
       margin-top: 50px
