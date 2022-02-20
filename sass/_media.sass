@@ -19,6 +19,8 @@
                font-size: 11px
 
 @media (max-width: 1024px)
+   body
+      cursor: auto
    .container
       max-width: calc(100% - 10vw)
    .main
@@ -36,10 +38,16 @@
                display: block
          &__button
             display: none
+      &-screen
+         height: 150vh
+   .grid
+      &__item
+         &--wrapper
+            background: #000000b2
+            opacity: 1
+            color: #fff
    .cursor
       display: none !important
-   body
-      cursor: auto
 @media (max-width: 1023px)
    .timeline
       &-web
@@ -58,7 +66,7 @@
                &-wrapper
                   justify-self: start
    .grid
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      // grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
       margin-top: 50px
       &__item
          background-size: 100px
@@ -114,8 +122,10 @@
             &:nth-child(-n+5)
                background-color: #fff
 
-// @media (max-width: 374px)
-   
+@media (max-width: 375px)
+   .main
+      &-screen
+         height: 450px
 
 @media (max-width: 320px)
    .main
