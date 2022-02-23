@@ -32,7 +32,6 @@ h3
    font-size: 60px
    font-weight: 500
 h4
-   font-size: 40px
    font-weight: 500
    line-height: 1
    margin: 0
@@ -165,6 +164,8 @@ blockquote
             font-size: 40px
             color: #000
             transition: all .2s ease-in-out
+            background-color: #9e9b9b2f
+            padding: 30px
             // &>span
             //    transition: all .2s ease-in-out
             //    &:hover
@@ -531,6 +532,7 @@ blockquote
       justify-self: center
       margin-top: 50px
       margin-bottom: 100px
+      positin: relative
       img
          display: block
          height: 60px
@@ -539,19 +541,27 @@ blockquote
          transition: filter .3s ease-in-out
          &:hover
             filter: grayscale(0%)
+      &:hover .technologies__tooltip
+         display: block
+         z-index: 100000
+         background-color: #ffffff
+   &__tooltip
+      display: none
+      font-size: 14px
+      position: absolute
+      background-color: #fff
 
 [data-tooltip] 
-    position: relative 
+    position: relative
 
 [data-tooltip]::after 
    content: attr(data-tooltip)
    position: absolute 
    width: 150px 
    left: -15px
-   background-color: #fff 
+   z-index: 10000
    color: #000
    font-size: 16px
-   box-shwdow: 0 0 12px 12px #421414
    padding: 20px
    pointer-events: none
    opacity: 0
@@ -559,6 +569,7 @@ blockquote
 [data-tooltip]:hover::after 
    opacity: 1
    top: 100px
+   z-index: 99999
 
 // Страница UX
 
