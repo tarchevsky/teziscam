@@ -93,8 +93,9 @@ blockquote
    &-header
       position: relative
       z-index: 1000
-      display: flex
-      justify-content: space-between
+      display: grid
+      grid-template-columns: auto 1fr auto
+      gap: 0 40px
       border-bottom: 2px solid #000
       background: #fff
       transition: all .2s ease-in-out
@@ -105,7 +106,7 @@ blockquote
       font-weight: 500
    &-menu
       display: grid
-      grid-template-columns: 1fr 1fr 1fr 1fr
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr))
       transition: all .2s ease-in-out
       &:hover ~ .cursor
          height: 20px
@@ -117,7 +118,7 @@ blockquote
       &__point
          align-self: center
          justify-self: center
-         font-size: 17px
+         font-size: 14px
          text-transform: uppercase
          font-weight: 600
          transition: color .2s ease-in-out
