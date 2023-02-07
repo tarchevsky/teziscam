@@ -81,15 +81,12 @@ blockquote
 .breadcrumbs
    margin-top: 50px
    &__nav
-      display: flex
-      justify-content: flex-start
+      display: inline
       font-weight: normal
       font-size: 16px
       color: #0000002a
       &--active
          color: #000
-      &--divider
-         white-space: pre-wrap
 
 
 .main
@@ -165,12 +162,12 @@ blockquote
             .blob
                position: absolute
                z-index: 2
-               display:block
-               height: 700px
-               width: 700px
+               display: block
+               height: 500px
+               width: 500px
                content: ''
                right: -413px
-               top: -192px
+               top: -102px
          &--sup
             font-size: 28px
          &--heading
@@ -286,7 +283,6 @@ blockquote
       background-color: #333
    &__list
       flex-wrap: wrap
-      background: url('../img/tezis/words.jpg') center center/cover no-repeat
       background-size: 103%
       height: min-content
       margin-bottom: 50px
@@ -294,8 +290,6 @@ blockquote
       &:hover
          background-size: calc(103% - 3%)
    &__item
-      display: grid
-      grid-template-columns: 1fr 1fr
       background-color: #fff
       height: min-content
       width: 400px
@@ -606,3 +600,20 @@ blockquote
       font-size: 120px
       font-weight: 900
       color: #0000000f
+
+.contacts
+   &-mail
+      font-size: 40px
+      font-weight: 500
+
+.footer
+   border-top: 2px solid #000f
+   &__inner
+      display: grid
+      grid-template-columns: 1fr 1fr
+      align-items: center
+      padding: 20px
+   .main-logo
+      justify-self: start
+   &-date
+      justify-self: end
