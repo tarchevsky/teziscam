@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', () => {
 	const tabs = document.querySelectorAll('.sites__tab'),
-			tabsContent = document.querySelectorAll('.sites__descr'),
-			tabsParent = document.querySelector('.sites__tabs');
+		tabsContent = document.querySelectorAll('.sites__descr'),
+		tabsParent = document.querySelector('.sites__tabs');
 
 	function hideTabContent() {
 		tabsContent.forEach(item => {
@@ -20,10 +20,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	tabsParent.addEventListener('click', (event) => {
 		const target = event.target;
-		
-		if(target && target.classList.contains('sites__tab')) {
+
+		if (target && target.classList.contains('sites__tab')) {
 			tabs.forEach((item, i) => {
-				if(target == item) {
+				if (target == item) {
 					hideTabContent();
 					showTabContent(i);
 				}
